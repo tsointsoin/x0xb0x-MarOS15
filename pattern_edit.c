@@ -745,14 +745,6 @@ void edit_pattern()
 	}
 	else if( (prev=is_pressed(KEY_PREV)) && just_pressed(KEY_NEXT) )
 	{	// forward rotating step 16=>1, 1=>2 ... 
-		// uint8_t i = 0;
-		// uint8_t new = pattern_buff[p_len - 1];
-		// while(i < p_len)
-		// {
-			// pattern_buff[i]=new; 
-			// i++;
-			// new=pattern_buff[i];
-		// }
 		
 		uint8_t i = p_len;
 		uint8_t last = pattern_buff[i];
