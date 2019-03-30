@@ -1,5 +1,5 @@
 # x0xb0x-MarOS15
-MarOS15 Operating System for x0xb0x - see https://forums.adafruit.com/viewtopic.php?f=13&amp;t=33914
+MarOS15 Operating System for x0xb0x - see https://forums.adafruit.com/viewtopic.php?f=13&t=33914
 
 Compile with AtmelStudio.
 Flash x0xb0x with avrdude -> avrdude -p atmega2561 -c stk500v2 -P COM3 -b 57600 -e -U flash:w:MarOS_2561.hex
