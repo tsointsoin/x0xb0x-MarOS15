@@ -9,3 +9,6 @@ Flash x0xb0x with avrdude:
 (replace COM3 with the actual port used by the x0xb0x)
 
 Compilation for x0xlarge CPU (Atmega2561).
+
+Original code by Limor Fried - https://www.adafruit.com/ - http://www.ladyada.net/
+Modifications Sokkan - Mario1089 - Nordcore
