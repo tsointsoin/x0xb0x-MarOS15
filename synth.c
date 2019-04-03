@@ -88,7 +88,7 @@ void note_on(uint8_t note) // , uint8_t slide, uint8_t accent)
 		// 10 uS
 		while(i < 40)
 		{
-			NOP; 
+			NOP;
 			i++;
 		}
 */

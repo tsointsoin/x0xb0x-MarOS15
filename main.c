@@ -652,7 +652,7 @@ void do_tempo(void)
 				{
 					//dispatch_note_off(curr_pitch_shift);
 					dispatch_note_off();
-				}			
+				}
 			}
 		}
 		else
@@ -663,24 +663,24 @@ void do_tempo(void)
 #ifdef HASRANDOM
 			if(curr_function==RANDOM_MODE_FUNC)
 			{
-				curr_note = next_random_note; 
+				curr_note = next_random_note;
 				next_random_note = random();
 				set_note_led(curr_note);
 				schedule_note=0;
 			}
-#endif 
+#endif
 			if(playing)
 			{
 				if(!tempoKnobMode)
-					set_current_index_led(); 
+					set_current_index_led();
 				// load up the next note
 				curr_note = pattern_buff[pattern_play_index];
 
 				if(curr_note != 0xFF)
 				{
-					if( (edit_mode&EDIT_RUNNING) && !store_mode ) // running edit, DONE not pressed: display notes 
+					if( (edit_mode&EDIT_RUNNING) && !store_mode ) // running edit, DONE not pressed: display notes
 							set_note_led(curr_note);
-						
+
 					schedule_note=curr_pitch_shift; //+ get_pitchshift_from_patt(curr_patt) );
 				}
 				pattern_play_index = get_next_patt_idx();
@@ -694,7 +694,7 @@ void do_tempo(void)
 				}
 				else
 				{
-					dispatch_note_on(schedule_note); 
+					dispatch_note_on(schedule_note);
 				}
 
 				if(GL != 0)

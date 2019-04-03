@@ -745,27 +745,27 @@ void edit_pattern()
 	}
 	else if( (prev=is_pressed(KEY_PREV)) && just_pressed(KEY_NEXT) )
 	{	// forward rotating step 16=>1, 1=>2 ... 
-		
+
 		uint8_t i = p_len;
 		uint8_t last = pattern_buff[i];
 		while (i > 0)
 		{
 			pattern_buff[i] = pattern_buff[i - 1];
-			i--;		
+			i--;
 		}
 		pattern_buff[0] = last;
-		
+
 		dirtyflag = 1;
 		inhibit=1;
 	}
-	else if(inhibit && !next && !prev)	// prev can only be undefined when next is true - so no problem. 
+	else if(inhibit && !next && !prev)	// prev can only be undefined when next is true - so no problem.
 	{
-		inhibit=0; 
+		inhibit=0;
 	}
-	else if( !inhibit && ( (next=just_released(KEY_NEXT)) || just_released(KEY_PREV)  || (next=auto_inc) ) ) // c is guaranteed for short evaluation! 
+	else if( !inhibit && ( (next=just_released(KEY_NEXT)) || just_released(KEY_PREV)  || (next=auto_inc) ) ) // c is guaranteed for short evaluation!
 	{
 		auto_inc=0; 
-		// NEXT or PREVIOUS:  
+		// NEXT or PREVIOUS:
 		// if not in one of the step modes: start them. 
 		// Else move the index around, optionally: end step modes on wrap.
 		// ignore keys, when they have been used for rotating the buffer

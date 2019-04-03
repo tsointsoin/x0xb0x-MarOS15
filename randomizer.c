@@ -84,7 +84,7 @@ void randomize(uint8_t scale, uint8_t p_len)
 	uint8_t repeatProp = randSetups[setup][9];		// probability pattern gets looped
 	uint8_t halfScaleProp = randSetups[setup][10];	// probability of pattern uses only note 0..6
 	uint8_t waupProp = randSetups[setup][11];	    // probability step is start of a "waup-sequence"
-    
+
 	uint8_t lastKey = 0;
 
 	uint8_t useStructuredRests = randomIf(restProp / 3) ? 1 : 0;
@@ -103,9 +103,9 @@ void randomize(uint8_t scale, uint8_t p_len)
             i++;
             continue;
         }
-        
+
 		uint8_t len = 1;
-        
+
 		if(!waupCount && randomIf(waupProp) && i<p_len-1)
         {
           waupCount = 1; // first step of waup
